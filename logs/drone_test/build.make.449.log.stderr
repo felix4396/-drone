@@ -1,0 +1,4 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:[m[K In function ‘[01m[Kint codeprocess(cv::Mat)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:414:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  414 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

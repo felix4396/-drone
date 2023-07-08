@@ -1,0 +1,8 @@
+prefix=/home/oem/catkin_ws/devel/.private/drone_test
+
+Name: drone_test
+Description: Description of drone_test
+Version: 0.0.0
+Cflags: -I/home/oem/catkin_ws/devel/.private/drone_test/include -I/home/oem/catkin_ws/src/drone_test/include
+Libs: -L${prefix}/lib 
+Requires: mavros_msgs roscpp rospy std_msgs geometry_msgs message_runtime

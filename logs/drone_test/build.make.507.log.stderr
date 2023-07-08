@@ -1,0 +1,18 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:[m[K In function ‘[01m[Kvoid send_tf_snapshot_takeoff()[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:331:21:[m[K [01;31m[Kerror: [m[K‘[01m[KStaticTransformBroadcaster[m[K’ in namespace ‘[01m[Ktf2_ros[m[K’ does not name a type
+  331 |     static tf2_ros::[01;31m[KStaticTransformBroadcaster[m[K br;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:344:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbr[m[K’ was not declared in this scope; did you mean ‘[01m[Kbrk[m[K’?
+  344 |     [01;31m[Kbr[m[K.sendTransform(transformStamped);
+      |     [01;31m[K^~[m[K
+      |     [32m[Kbrk[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:[m[K At global scope:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:347:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint arm_drone(ros::NodeHandle&)[m[K’
+  347 | int [01;31m[Karm_drone[m[K(ros::NodeHandle &nh)
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:294:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint arm_drone(ros::NodeHandle&)[m[K’ previously defined here
+  294 | int [01;36m[Karm_drone[m[K(ros::NodeHandle &nh)
+      |     [01;36m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:63：CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:304：CMakeFiles/yyy_drone.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

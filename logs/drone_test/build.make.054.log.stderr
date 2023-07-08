@@ -1,0 +1,50 @@
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `ColorCallback(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&)':
+star_detection.cpp:(.text+0xdb2): undefined reference to `cv_bridge::toCvShare(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `DepthCallback(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&)':
+star_detection.cpp:(.text+0xeb9): undefined reference to `cv_bridge::toCvCopy(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::SymbolSet::ref(int) const':
+star_detection.cpp:(.text._ZNK4zbar9SymbolSet3refEi[_ZNK4zbar9SymbolSet3refEi]+0x2f): undefined reference to `zbar_symbol_set_ref'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::SymbolSet::get_size() const':
+star_detection.cpp:(.text._ZNK4zbar9SymbolSet8get_sizeEv[_ZNK4zbar9SymbolSet8get_sizeEv]+0x27): undefined reference to `zbar_symbol_set_get_size'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Symbol::operator=(zbar::zbar_symbol_s const*)':
+star_detection.cpp:(.text._ZN4zbar6SymbolaSEPKNS_13zbar_symbol_sE[_ZN4zbar6SymbolaSEPKNS_13zbar_symbol_sE]+0x28): undefined reference to `zbar_symbol_ref'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Symbol::ref(int) const':
+star_detection.cpp:(.text._ZNK4zbar6Symbol3refEi[_ZNK4zbar6Symbol3refEi]+0x2f): undefined reference to `zbar_symbol_ref'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Symbol::get_type_name[abi:cxx11]() const':
+star_detection.cpp:(.text._ZNK4zbar6Symbol13get_type_nameB5cxx11Ev[_ZNK4zbar6Symbol13get_type_nameB5cxx11Ev]+0x3a): undefined reference to `zbar_get_symbol_name'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Symbol::init(zbar::zbar_symbol_s const*)':
+star_detection.cpp:(.text._ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE[_ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE]+0x42): undefined reference to `zbar_symbol_get_type'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE[_ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE]+0x61): undefined reference to `zbar_symbol_get_data_length'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE[_ZN4zbar6Symbol4initEPKNS_13zbar_symbol_sE]+0x6f): undefined reference to `zbar_symbol_get_data'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::SymbolIterator::SymbolIterator(zbar::SymbolSet const&)':
+star_detection.cpp:(.text._ZN4zbar14SymbolIteratorC2ERKNS_9SymbolSetE[_ZN4zbar14SymbolIteratorC5ERKNS_9SymbolSetE]+0x5c): undefined reference to `zbar_symbol_set_first_symbol'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::SymbolIterator::operator++()':
+star_detection.cpp:(.text._ZN4zbar14SymbolIteratorppEv[_ZN4zbar14SymbolIteratorppEv]+0x3b): undefined reference to `zbar_symbol_next'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar14SymbolIteratorppEv[_ZN4zbar14SymbolIteratorppEv]+0x7a): undefined reference to `zbar_symbol_set_first_symbol'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::Image(unsigned int, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void const*, unsigned long)':
+star_detection.cpp:(.text._ZN4zbar5ImageC2EjjRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKvm[_ZN4zbar5ImageC5EjjRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKvm]+0x23): undefined reference to `zbar_image_create'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar5ImageC2EjjRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKvm[_ZN4zbar5ImageC5EjjRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKvm]+0x40): undefined reference to `zbar_image_set_userdata'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::~Image()':
+star_detection.cpp:(.text._ZN4zbar5ImageD2Ev[_ZN4zbar5ImageD5Ev]+0x1b): undefined reference to `zbar_image_get_userdata'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar5ImageD2Ev[_ZN4zbar5ImageD5Ev]+0x3a): undefined reference to `zbar_image_set_userdata'
+/usr/bin/ld: star_detection.cpp:(.text._ZN4zbar5ImageD2Ev[_ZN4zbar5ImageD5Ev]+0x4e): undefined reference to `zbar_image_ref'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::set_format(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+star_detection.cpp:(.text._ZN4zbar5Image10set_formatERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4zbar5Image10set_formatERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x3e): undefined reference to `zbar_image_set_format'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::set_size(unsigned int, unsigned int)':
+star_detection.cpp:(.text._ZN4zbar5Image8set_sizeEjj[_ZN4zbar5Image8set_sizeEjj]+0x29): undefined reference to `zbar_image_set_size'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::set_data(void const*, unsigned long)':
+star_detection.cpp:(.text._ZN4zbar5Image8set_dataEPKvm[_ZN4zbar5Image8set_dataEPKvm]+0x32): undefined reference to `zbar_image_set_data'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::Image::get_symbols() const':
+star_detection.cpp:(.text._ZNK4zbar5Image11get_symbolsEv[_ZNK4zbar5Image11get_symbolsEv]+0x1f): undefined reference to `zbar_image_get_symbols'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::ImageScanner::ImageScanner(zbar::zbar_image_scanner_s*)':
+star_detection.cpp:(.text._ZN4zbar12ImageScannerC2EPNS_20zbar_image_scanner_sE[_ZN4zbar12ImageScannerC5EPNS_20zbar_image_scanner_sE]+0x29): undefined reference to `zbar_image_scanner_create'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::ImageScanner::~ImageScanner()':
+star_detection.cpp:(.text._ZN4zbar12ImageScannerD2Ev[_ZN4zbar12ImageScannerD5Ev]+0x1b): undefined reference to `zbar_image_scanner_destroy'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::ImageScanner::set_config(zbar::zbar_symbol_type_e, zbar::zbar_config_e, int)':
+star_detection.cpp:(.text._ZN4zbar12ImageScanner10set_configENS_18zbar_symbol_type_eENS_13zbar_config_eEi[_ZN4zbar12ImageScanner10set_configENS_18zbar_symbol_type_eENS_13zbar_config_eEi]+0x2d): undefined reference to `zbar_image_scanner_set_config'
+/usr/bin/ld: CMakeFiles/star_detection.dir/src/star_detection.cpp.o: in function `zbar::ImageScanner::scan(zbar::Image&)':
+star_detection.cpp:(.text._ZN4zbar12ImageScanner4scanERNS_5ImageE[_ZN4zbar12ImageScanner4scanERNS_5ImageE]+0x31): undefined reference to `zbar_scan_image'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/star_detection.dir/build.make:167：/home/oem/catkin_ws/devel/.private/drone_test/lib/drone_test/star_detection] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:505：CMakeFiles/star_detection.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

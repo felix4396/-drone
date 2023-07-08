@@ -1,0 +1,154 @@
+In file included from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:1[m[K:
+/usr/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = const cv_bridge::CvImage; T = cv_bridge::CvImage][m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:76:78:[m[K   required from here
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kboost::shared_ptr<cv_bridge::CvImage>::shared_ptr(boost::shared_ptr<const cv_bridge::CvImage>)[m[K’
+  667 |         [01;31m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:673:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, boost::shared_ptr<T>::element_type*)[m[K’
+  673 |     [01;36m[Kshared_ptr[m[K( shared_ptr<Y> && r, element_type * p ) BOOST_SP_NOEXCEPT : px( p ), pn()
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:673:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:643:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)[m[K’
+  643 |     [01;36m[Kshared_ptr[m[K( shared_ptr<Y> && r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:643:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘[01m[Ktemplate<class Y> boost::shared_ptr<cv_bridge::CvImage>::shared_ptr(boost::shared_ptr<X>&&, typename boost::detail::sp_enable_if_convertible<Y, cv_bridge::CvImage>::type) [with Y = const cv_bridge::CvImage][m[K’:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K   required from ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = const cv_bridge::CvImage; T = cv_bridge::CvImage][m[K’
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:76:78:[m[K   required from here
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:643:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct boost::detail::sp_enable_if_convertible<const cv_bridge::CvImage, cv_bridge::CvImage>[m[K’
+/usr/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = const cv_bridge::CvImage; T = cv_bridge::CvImage][m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:76:78:[m[K   required from here
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:634:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>::shared_ptr(boost::shared_ptr<T>&&) [with T = cv_bridge::CvImage][m[K’
+  634 |     [01;36m[Kshared_ptr[m[K( shared_ptr && r ) BOOST_SP_NOEXCEPT : px( r.px ), pn()
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:634:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ to ‘[01m[Kboost::shared_ptr<cv_bridge::CvImage>&&[m[K’
+  634 |     shared_ptr( [01;36m[Kshared_ptr && r[m[K ) BOOST_SP_NOEXCEPT : px( r.px ), pn()
+      |                 [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:532:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>::shared_ptr(boost::movelib::unique_ptr<Y, D>)[m[K’
+  532 |     [01;36m[Kshared_ptr[m[K( boost::movelib::unique_ptr< Y, D > r ): px( r.get() ), pn()
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:532:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kboost::movelib::unique_ptr<Y, D>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:516:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>::shared_ptr(std::unique_ptr<_Up, _Ep>&&)[m[K’
+  516 |     [01;36m[Kshared_ptr[m[K( std::unique_ptr< Y, D > && r ): px( r.get() ), pn()
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:516:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kstd::unique_ptr<_Tp, _Dp>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:484:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&&)[m[K’
+  484 |     [01;36m[Kshared_ptr[m[K( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:484:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:471:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&)[m[K’
+  471 |     explicit [01;36m[Kshared_ptr[m[K( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:471:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kstd::auto_ptr<Y>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:464:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, boost::shared_ptr<T>::element_type*)[m[K’
+  464 |     [01;36m[Kshared_ptr[m[K( shared_ptr<Y> const & r, element_type * p ) BOOST_SP_NOEXCEPT : px( p ), pn( r.pn )
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:464:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:450:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)[m[K’
+  450 |     [01;36m[Kshared_ptr[m[K( shared_ptr<Y> const & r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:450:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘[01m[Ktemplate<class Y> boost::shared_ptr<cv_bridge::CvImage>::shared_ptr(const boost::shared_ptr<X>&, typename boost::detail::sp_enable_if_convertible<Y, cv_bridge::CvImage>::type) [with Y = const cv_bridge::CvImage][m[K’:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K   required from ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = const cv_bridge::CvImage; T = cv_bridge::CvImage][m[K’
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:76:78:[m[K   required from here
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:450:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct boost::detail::sp_enable_if_convertible<const cv_bridge::CvImage, cv_bridge::CvImage>[m[K’
+/usr/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘[01m[Kboost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = const cv_bridge::CvImage; T = cv_bridge::CvImage][m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:76:78:[m[K   required from here
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:438:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&, boost::detail::sp_nothrow_tag)[m[K’
+  438 |     [01;36m[Kshared_ptr[m[K( weak_ptr<Y> const & r, boost::detail::sp_nothrow_tag )
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:438:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kconst boost::weak_ptr<Y>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:429:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&)[m[K’
+  429 |     explicit [01;36m[Kshared_ptr[m[K( weak_ptr<Y> const & r ): pn( r.pn ) // may throw
+      |              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:429:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ is not derived from ‘[01m[Kconst boost::weak_ptr<Y>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:422:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kboost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<T>&) [with T = cv_bridge::CvImage][m[K’
+  422 |     [01;36m[Kshared_ptr[m[K( shared_ptr const & r ) BOOST_SP_NOEXCEPT : px( r.px ), pn( r.pn )
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:422:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ to ‘[01m[Kconst boost::shared_ptr<cv_bridge::CvImage>&[m[K’
+  422 |     shared_ptr( [01;36m[Kshared_ptr const & r[m[K ) BOOST_SP_NOEXCEPT : px( r.px ), pn( r.pn )
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:410:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class D, class A> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D, A)[m[K’
+  410 |     template<class D, class A> [01;36m[Kshared_ptr[m[K( boost::detail::sp_nullptr_t p, D d, A a ): px( p ), pn( p, d, a )
+      |                                [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:410:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:403:41:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D, class A> boost::shared_ptr<T>::shared_ptr(Y*, D, A)[m[K’
+  403 |     template<class Y, class D, class A> [01;36m[Kshared_ptr[m[K( Y * p, D d, A a ): px( p ), pn( p, d, a )
+      |                                         [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:403:41:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[KY*[m[K’ and ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:395:23:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class D> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D)[m[K’
+  395 |     template<class D> [01;36m[Kshared_ptr[m[K( boost::detail::sp_nullptr_t p, D d ): px( p ), pn( p, d )
+      |                       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:395:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:388:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y, class D> boost::shared_ptr<T>::shared_ptr(Y*, D)[m[K’
+  388 |     template<class Y, class D> [01;36m[Kshared_ptr[m[K( Y * p, D d ): px( p ), pn( p, d )
+      |                                [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:388:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[KY*[m[K’ and ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:377:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Y> boost::shared_ptr<T>::shared_ptr(Y*)[m[K’
+  377 |     explicit [01;36m[Kshared_ptr[m[K( Y * p ): px( p ), pn() // Y must be complete
+      |              [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:377:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:667:9:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[KY*[m[K’ and ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’
+  667 |         [01;36m[Kthis_type( static_cast< shared_ptr<Y> && >( r ) )[m[K.swap( *this );
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:370:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr boost::shared_ptr<T>::shared_ptr(boost::detail::sp_internal_constructor_tag, boost::shared_ptr<T>::element_type*, boost::detail::shared_count&&) [with T = cv_bridge::CvImage; boost::shared_ptr<T>::element_type = cv_bridge::CvImage][m[K’
+  370 |     BOOST_CONSTEXPR [01;36m[Kshared_ptr[m[K( boost::detail::sp_internal_constructor_tag, element_type * px_, boost::detail::shared_count && pn_ ) BOOST_SP_NOEXCEPT : px( px_ ), pn( std::move( pn_ ) )
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:370:21:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:364:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr boost::shared_ptr<T>::shared_ptr(boost::detail::sp_internal_constructor_tag, boost::shared_ptr<T>::element_type*, const boost::detail::shared_count&) [with T = cv_bridge::CvImage; boost::shared_ptr<T>::element_type = cv_bridge::CvImage][m[K’
+  364 |     BOOST_CONSTEXPR [01;36m[Kshared_ptr[m[K( boost::detail::sp_internal_constructor_tag, element_type * px_, boost::detail::shared_count const & pn_ ) BOOST_SP_NOEXCEPT : px( px_ ), pn( pn_ )
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:364:21:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:358:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t) [with T = cv_bridge::CvImage; boost::detail::sp_nullptr_t = std::nullptr_t][m[K’
+  358 |     BOOST_CONSTEXPR [01;36m[Kshared_ptr[m[K( boost::detail::sp_nullptr_t ) BOOST_SP_NOEXCEPT : px( 0 ), pn()
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:358:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kboost::shared_ptr<const cv_bridge::CvImage>[m[K’ to ‘[01m[Kboost::detail::sp_nullptr_t[m[K’ {aka ‘[01m[Kstd::nullptr_t[m[K’}
+  358 |     BOOST_CONSTEXPR shared_ptr( [01;36m[Kboost::detail::sp_nullptr_t[m[K ) BOOST_SP_NOEXCEPT : px( 0 ), pn()
+      |                                 [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:352:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr boost::shared_ptr<T>::shared_ptr() [with T = cv_bridge::CvImage][m[K’
+  352 |     BOOST_CONSTEXPR [01;36m[Kshared_ptr[m[K() BOOST_SP_NOEXCEPT : px( 0 ), pn()
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:352:21:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+make[2]: *** [CMakeFiles/star_detection.dir/build.make:63：CMakeFiles/star_detection.dir/src/star_detection.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:505：CMakeFiles/star_detection.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -1,0 +1,39 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:[m[K In function ‘[01m[Kint detectColorWithSmallerLineDepth(std::vector<std::vector<int> >)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:367:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble dis[m[K’
+  367 |     double [01;31m[Kdis[m[K = depth2 - last_depth_2;
+      |            [01;31m[K^~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:358:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble dis[m[K’ previously declared here
+  358 |     double [01;36m[Kdis[m[K = depth1 - last_depth_1;
+      |            [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:1[m[K:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:456:18:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 8 has type ‘[01m[Kstd::vector<cv::Vec<int, 4> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+  456 |         ROS_INFO([01;35m[K"lines.size()=%d"[m[K, [32m[Klines.size()[m[K);
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~[m[K
+      |                                               [32m[K|[m[K
+      |                                               [32m[Kstd::vector<cv::Vec<int, 4> >::size_type {aka long unsigned int}[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:456:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  456 |         [01;36m[KROS_INFO[m[K("lines.size()=%d", lines.size());
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:456:33:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  456 |         ROS_INFO("lines.size()=[01;36m[K%d[m[K", lines.size());
+      |                                [01;36m[K~^[m[K
+      |                                 [01;36m[K|[m[K
+      |                                 [01;36m[Kint[m[K
+      |                                [32m[K%ld[m[K
+make[2]: *** [CMakeFiles/star_detection.dir/build.make:63：CMakeFiles/star_detection.dir/src/star_detection.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:505：CMakeFiles/star_detection.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

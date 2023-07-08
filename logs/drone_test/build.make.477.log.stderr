@@ -1,0 +1,12 @@
+/usr/bin/ld: CMakeFiles/circle.dir/src/circle.cpp.o: in function `colorCb(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&)':
+circle.cpp:(.text+0x65): undefined reference to `cv_bridge::toCvShare(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/circle.dir/src/circle.cpp.o: in function `main':
+circle.cpp:(.text+0x3c5): undefined reference to `image_transport::ImageTransport::ImageTransport(ros::NodeHandle const&)'
+/usr/bin/ld: circle.cpp:(.text+0x8dd): undefined reference to `image_transport::ImageTransport::~ImageTransport()'
+/usr/bin/ld: CMakeFiles/circle.dir/src/circle.cpp.o: in function `image_transport::ImageTransport::subscribe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, void (*)(boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&), image_transport::TransportHints const&)':
+circle.cpp:(.text._ZN15image_transport14ImageTransport9subscribeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEjPFvRKN5boost10shared_ptrIKN11sensor_msgs6Image_ISaIvEEEEEERKNS_14TransportHintsE[_ZN15image_transport14ImageTransport9subscribeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEjPFvRKN5boost10shared_ptrIKN11sensor_msgs6Image_ISaIvEEEEEERKNS_14TransportHintsE]+0x7f): undefined reference to `image_transport::ImageTransport::subscribe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, boost::function<void (boost::shared_ptr<sensor_msgs::Image_<std::allocator<void> > const> const&)> const&, boost::shared_ptr<void> const&, image_transport::TransportHints const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/circle.dir/build.make:167：/home/oem/catkin_ws/devel/.private/drone_test/lib/drone_test/circle] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:405：CMakeFiles/circle.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+make: *** [Makefile:141：all] 错误 2

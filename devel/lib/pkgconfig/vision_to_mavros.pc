@@ -1,0 +1,1 @@
+/home/oem/catkin_ws/devel/.private/vision_to_mavros/lib/pkgconfig/vision_to_mavros.pc

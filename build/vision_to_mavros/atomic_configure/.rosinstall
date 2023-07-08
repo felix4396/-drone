@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/oem/catkin_ws/devel/.private/vision_to_mavros/setup.sh

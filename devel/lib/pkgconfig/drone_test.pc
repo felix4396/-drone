@@ -1,0 +1,1 @@
+/home/oem/catkin_ws/devel/.private/drone_test/lib/pkgconfig/drone_test.pc

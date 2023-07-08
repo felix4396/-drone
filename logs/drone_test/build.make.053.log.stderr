@@ -1,0 +1,74 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:38:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kzbar[m[K’ is not a namespace-name
+   38 | using namespace [01;31m[Kzbar[m[K;
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:446:5:[m[K [01;31m[Kerror: [m[K‘[01m[KImageScanner[m[K’ was not declared in this scope
+  446 |     [01;31m[KImageScanner[m[K scanner;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:447:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kscanner[m[K’ was not declared in this scope; did you mean ‘[01m[Kscanf[m[K’?
+  447 |  [01;31m[Kscanner[m[K.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);
+      |  [01;31m[K^~~~~~~[m[K
+      |  [32m[Kscanf[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:447:21:[m[K [01;31m[Kerror: [m[K‘[01m[KZBAR_NONE[m[K’ was not declared in this scope
+  447 |  scanner.set_config([01;31m[KZBAR_NONE[m[K, ZBAR_CFG_ENABLE, 1);
+      |                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:447:32:[m[K [01;31m[Kerror: [m[K‘[01m[KZBAR_CFG_ENABLE[m[K’ was not declared in this scope
+  447 |  scanner.set_config(ZBAR_NONE, [01;31m[KZBAR_CFG_ENABLE[m[K, 1);
+      |                                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:706:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_msgs::Image[m[K’?
+  706 |                         [01;31m[KImage[m[K imageZbar(width, height, "Y800", raw, width * height);
+      |                         [01;31m[K^~~~~[m[K
+      |                         [32m[Ksensor_msgs::Image[m[K
+In file included from [01m[K/opt/ros/noetic/include/cv_bridge/cv_bridge.h:39[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:33[m[K:
+[01m[K/opt/ros/noetic/include/sensor_msgs/Image.h:79:54:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::Image[m[K’ declared here
+   79 | typedef ::sensor_msgs::Image_<std::allocator<void> > [01;36m[KImage[m[K;
+      |                                                      [01;36m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:707:38:[m[K [01;31m[Kerror: [m[K‘[01m[KimageZbar[m[K’ was not declared in this scope
+  707 |                         scanner.scan([01;31m[KimageZbar[m[K);
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:708:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ is not a class, namespace, or enumeration
+  708 |                         [01;31m[KImage[m[K::SymbolIterator symbol = imageZbar.symbol_begin();
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:717:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ksymbol[m[K’ was not declared in this scope
+  717 |                             for (; [01;31m[Ksymbol[m[K != imageZbar.symbol_end(); ++symbol)
+      |                                    [01;31m[K^~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:806:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_msgs::Image[m[K’?
+  806 |                         [01;31m[KImage[m[K imageZbar(width, height, "Y800", raw, width * height);
+      |                         [01;31m[K^~~~~[m[K
+      |                         [32m[Ksensor_msgs::Image[m[K
+In file included from [01m[K/opt/ros/noetic/include/cv_bridge/cv_bridge.h:39[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:33[m[K:
+[01m[K/opt/ros/noetic/include/sensor_msgs/Image.h:79:54:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::Image[m[K’ declared here
+   79 | typedef ::sensor_msgs::Image_<std::allocator<void> > [01;36m[KImage[m[K;
+      |                                                      [01;36m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:807:38:[m[K [01;31m[Kerror: [m[K‘[01m[KimageZbar[m[K’ was not declared in this scope
+  807 |                         scanner.scan([01;31m[KimageZbar[m[K);
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:808:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ is not a class, namespace, or enumeration
+  808 |                         [01;31m[KImage[m[K::SymbolIterator symbol = imageZbar.symbol_begin();
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:817:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ksymbol[m[K’ was not declared in this scope
+  817 |                             for (; [01;31m[Ksymbol[m[K != imageZbar.symbol_end(); ++symbol)
+      |                                    [01;31m[K^~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:897:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_msgs::Image[m[K’?
+  897 |                         [01;31m[KImage[m[K imageZbar(width, height, "Y800", raw, width * height);
+      |                         [01;31m[K^~~~~[m[K
+      |                         [32m[Ksensor_msgs::Image[m[K
+In file included from [01m[K/opt/ros/noetic/include/cv_bridge/cv_bridge.h:39[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:33[m[K:
+[01m[K/opt/ros/noetic/include/sensor_msgs/Image.h:79:54:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::Image[m[K’ declared here
+   79 | typedef ::sensor_msgs::Image_<std::allocator<void> > [01;36m[KImage[m[K;
+      |                                                      [01;36m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:898:38:[m[K [01;31m[Kerror: [m[K‘[01m[KimageZbar[m[K’ was not declared in this scope
+  898 |                         scanner.scan([01;31m[KimageZbar[m[K);
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:899:25:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ is not a class, namespace, or enumeration
+  899 |                         [01;31m[KImage[m[K::SymbolIterator symbol = imageZbar.symbol_begin();
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:908:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ksymbol[m[K’ was not declared in this scope
+  908 |                             for (; [01;31m[Ksymbol[m[K != imageZbar.symbol_end(); ++symbol)
+      |                                    [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/star_detection.dir/build.make:63：CMakeFiles/star_detection.dir/src/star_detection.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:505：CMakeFiles/star_detection.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

@@ -1,0 +1,3 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/circle.cpp:111:22:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+  111 |     VideoCapture cap([01;35m[K'/dev/video4'[m[K);
+      |                      [01;35m[K^~~~~~~~~~~~~[m[K
