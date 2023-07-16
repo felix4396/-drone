@@ -11,20 +11,19 @@ set(mavros_DIR /home/blue/catkin_ws_mavros/devel/share/mavros/cmake/)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
-  mavros_msgs
-  geographic_msgs
   roscpp
   rospy
   std_msgs
+  geometry_msgs
   message_generation
+  mavros_msgs
+  geographic_msgs
   tf2
   tf2_ros
   tf2_geometry_msgs
   cv_bridge
   sensor_msgs
   image_transport
-  message_generation
 )
 
 
@@ -70,6 +69,7 @@ add_message_files(
   FILES
   detection.msg
   code.msg
+  Y_Serial_port.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -127,7 +127,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES drone_test
- CATKIN_DEPENDS  mavros_msgs roscpp rospy std_msgs geometry_msgs message_runtime
+ CATKIN_DEPENDS  mavros_msgs roscpp rospy std_msgs geometry_msgs message_runtime 
 #  DEPENDS system_lib
 )
 
@@ -145,7 +145,6 @@ include_directories(
  include
   ${OpenCV_INCLUDE_DIRS}
 )
-
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/drone_test.cpp
@@ -164,7 +163,6 @@ include_directories(
  add_executable(star_detection src/star_detection.cpp)
  add_executable(circle src/circle.cpp)
  add_executable(yyy_drone src/yyy_drone.cpp)
- 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -206,6 +204,7 @@ include_directories(
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
 )
+
 #############
 ## Install ##
 #############

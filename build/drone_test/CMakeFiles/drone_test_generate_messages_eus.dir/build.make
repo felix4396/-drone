@@ -55,6 +55,7 @@ include CMakeFiles/drone_test_generate_messages_eus.dir/progress.make
 
 CMakeFiles/drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/detection.l
 CMakeFiles/drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/code.l
+CMakeFiles/drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/Y_Serial_port.l
 CMakeFiles/drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/manifest.l
 
 
@@ -68,13 +69,19 @@ CMakeFiles/drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from drone_test/code.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/oem/catkin_ws/src/drone_test/msg/code.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg
 
+/home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/Y_Serial_port.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/Y_Serial_port.l: /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from drone_test/Y_Serial_port.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg
+
 /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for drone_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for drone_test"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test drone_test geometry_msgs mavros_msgs std_msgs geographic_msgs
 
 drone_test_generate_messages_eus: CMakeFiles/drone_test_generate_messages_eus
 drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/detection.l
 drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/code.l
+drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/Y_Serial_port.l
 drone_test_generate_messages_eus: /home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/manifest.l
 drone_test_generate_messages_eus: CMakeFiles/drone_test_generate_messages_eus.dir/build.make
 

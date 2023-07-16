@@ -66,7 +66,7 @@
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
   <build_export_depend>cv_bridge</build_export_depend>
-  <build_export_depend>image_transport</build_export_depend>
+  <build_export_depend>image_transport</build_export_depend> 
 
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>cmake_modules</exec_depend>
@@ -77,7 +77,7 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>message_runtime</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
-  <exec_depend>image_transport</exec_depend>
+  <exec_depend>image_transport</exec_depend>c
 
 
   <!-- The export tag contains other, unspecified, tags -->

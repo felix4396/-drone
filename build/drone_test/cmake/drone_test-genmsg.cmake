@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "drone_test: 2 messages, 0 services")
+message(STATUS "drone_test: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Idrone_test:/home/oem/catkin_ws/src/drone_test/msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_drone_test_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "drone_test" "/home/oem/catkin_ws/src/drone_test/msg/code.msg" ""
 )
 
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
+add_custom_target(_drone_test_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "drone_test" "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -41,6 +46,12 @@ _generate_msg_cpp(drone_test
 )
 _generate_msg_cpp(drone_test
   "/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/drone_test
+)
+_generate_msg_cpp(drone_test
+  "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/drone_test
@@ -64,6 +75,8 @@ get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/detecti
 add_dependencies(drone_test_generate_messages_cpp _drone_test_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/code.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_cpp _drone_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
+add_dependencies(drone_test_generate_messages_cpp _drone_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(drone_test_gencpp)
@@ -82,6 +95,12 @@ _generate_msg_eus(drone_test
 )
 _generate_msg_eus(drone_test
   "/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/drone_test
+)
+_generate_msg_eus(drone_test
+  "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/drone_test
@@ -105,6 +124,8 @@ get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/detecti
 add_dependencies(drone_test_generate_messages_eus _drone_test_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/code.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_eus _drone_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
+add_dependencies(drone_test_generate_messages_eus _drone_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(drone_test_geneus)
@@ -123,6 +144,12 @@ _generate_msg_lisp(drone_test
 )
 _generate_msg_lisp(drone_test
   "/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/drone_test
+)
+_generate_msg_lisp(drone_test
+  "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/drone_test
@@ -146,6 +173,8 @@ get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/detecti
 add_dependencies(drone_test_generate_messages_lisp _drone_test_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/code.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_lisp _drone_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
+add_dependencies(drone_test_generate_messages_lisp _drone_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(drone_test_genlisp)
@@ -164,6 +193,12 @@ _generate_msg_nodejs(drone_test
 )
 _generate_msg_nodejs(drone_test
   "/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/drone_test
+)
+_generate_msg_nodejs(drone_test
+  "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/drone_test
@@ -187,6 +222,8 @@ get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/detecti
 add_dependencies(drone_test_generate_messages_nodejs _drone_test_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/code.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_nodejs _drone_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
+add_dependencies(drone_test_generate_messages_nodejs _drone_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(drone_test_gennodejs)
@@ -209,6 +246,12 @@ _generate_msg_py(drone_test
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/drone_test
 )
+_generate_msg_py(drone_test
+  "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/drone_test
+)
 
 ### Generating Services
 
@@ -227,6 +270,8 @@ add_dependencies(drone_test_generate_messages drone_test_generate_messages_py)
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/detection.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_py _drone_test_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/code.msg" NAME_WE)
+add_dependencies(drone_test_generate_messages_py _drone_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg" NAME_WE)
 add_dependencies(drone_test_generate_messages_py _drone_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

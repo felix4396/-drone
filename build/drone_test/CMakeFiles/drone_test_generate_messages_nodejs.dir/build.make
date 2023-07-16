@@ -55,6 +55,7 @@ include CMakeFiles/drone_test_generate_messages_nodejs.dir/progress.make
 
 CMakeFiles/drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/detection.js
 CMakeFiles/drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/code.js
+CMakeFiles/drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/Y_Serial_port.js
 
 
 /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/detection.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -67,9 +68,15 @@ CMakeFiles/drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.priva
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from drone_test/code.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/oem/catkin_ws/src/drone_test/msg/code.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg
 
+/home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/Y_Serial_port.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/Y_Serial_port.js: /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from drone_test/Y_Serial_port.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg
+
 drone_test_generate_messages_nodejs: CMakeFiles/drone_test_generate_messages_nodejs
 drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/detection.js
 drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/code.js
+drone_test_generate_messages_nodejs: /home/oem/catkin_ws/devel/.private/drone_test/share/gennodejs/ros/drone_test/msg/Y_Serial_port.js
 drone_test_generate_messages_nodejs: CMakeFiles/drone_test_generate_messages_nodejs.dir/build.make
 
 .PHONY : drone_test_generate_messages_nodejs

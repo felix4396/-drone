@@ -3,6 +3,8 @@
           ERRO_X
           ERRO_Y-VAL
           ERRO_Y
+          ERRO_Z-VAL
+          ERRO_Z
           FLAG-VAL
           FLAG
           START_OPENCV-VAL

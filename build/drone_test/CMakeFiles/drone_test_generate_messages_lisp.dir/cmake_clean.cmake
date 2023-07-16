@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/Y_Serial_port.lisp"
   "/home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/code.lisp"
   "/home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/detection.lisp"
   "CMakeFiles/drone_test_generate_messages_lisp"

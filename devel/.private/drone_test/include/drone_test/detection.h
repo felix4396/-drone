@@ -26,12 +26,14 @@ struct detection_
   detection_()
     : erro_x(0.0)
     , erro_y(0.0)
+    , erro_z(0.0)
     , flag(0)
     , start_opencv(0)  {
     }
   detection_(const ContainerAllocator& _alloc)
     : erro_x(0.0)
     , erro_y(0.0)
+    , erro_z(0.0)
     , flag(0)
     , start_opencv(0)  {
   (void)_alloc;
@@ -45,10 +47,13 @@ struct detection_
    typedef double _erro_y_type;
   _erro_y_type erro_y;
 
-   typedef int8_t _flag_type;
+   typedef double _erro_z_type;
+  _erro_z_type erro_z;
+
+   typedef uint8_t _flag_type;
   _flag_type flag;
 
-   typedef int8_t _start_opencv_type;
+   typedef uint8_t _start_opencv_type;
   _start_opencv_type start_opencv;
 
 
@@ -82,6 +87,7 @@ bool operator==(const ::drone_test::detection_<ContainerAllocator1> & lhs, const
 {
   return lhs.erro_x == rhs.erro_x &&
     lhs.erro_y == rhs.erro_y &&
+    lhs.erro_z == rhs.erro_z &&
     lhs.flag == rhs.flag &&
     lhs.start_opencv == rhs.start_opencv;
 }
@@ -140,12 +146,12 @@ struct MD5Sum< ::drone_test::detection_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "5758eab71db35db21ff4cedc29365b18";
+    return "156cdb81e2b7ac989e48faaa7c1e6124";
   }
 
   static const char* value(const ::drone_test::detection_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x5758eab71db35db2ULL;
-  static const uint64_t static_value2 = 0x1ff4cedc29365b18ULL;
+  static const uint64_t static_value1 = 0x156cdb81e2b7ac98ULL;
+  static const uint64_t static_value2 = 0x9e48faaa7c1e6124ULL;
 };
 
 template<class ContainerAllocator>
@@ -166,8 +172,9 @@ struct Definition< ::drone_test::detection_<ContainerAllocator> >
   {
     return "float64 erro_x\n"
 "float64 erro_y\n"
-"int8 flag\n"
-"int8 start_opencv\n"
+"float64 erro_z\n"
+"uint8 flag\n"
+"uint8 start_opencv\n"
 ;
   }
 
@@ -188,6 +195,7 @@ namespace serialization
     {
       stream.next(m.erro_x);
       stream.next(m.erro_y);
+      stream.next(m.erro_z);
       stream.next(m.flag);
       stream.next(m.start_opencv);
     }
@@ -212,10 +220,12 @@ struct Printer< ::drone_test::detection_<ContainerAllocator> >
     Printer<double>::stream(s, indent + "  ", v.erro_x);
     s << indent << "erro_y: ";
     Printer<double>::stream(s, indent + "  ", v.erro_y);
+    s << indent << "erro_z: ";
+    Printer<double>::stream(s, indent + "  ", v.erro_z);
     s << indent << "flag: ";
-    Printer<int8_t>::stream(s, indent + "  ", v.flag);
+    Printer<uint8_t>::stream(s, indent + "  ", v.flag);
     s << indent << "start_opencv: ";
-    Printer<int8_t>::stream(s, indent + "  ", v.start_opencv);
+    Printer<uint8_t>::stream(s, indent + "  ", v.start_opencv);
   }
 };
 

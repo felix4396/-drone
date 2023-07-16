@@ -1,4 +1,5 @@
 float64 erro_x
 float64 erro_y
-int8 flag
-int8 start_opencv
+float64 erro_z
+uint8 flag
+uint8 start_opencv

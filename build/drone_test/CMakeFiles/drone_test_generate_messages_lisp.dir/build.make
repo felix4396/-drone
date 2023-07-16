@@ -55,6 +55,7 @@ include CMakeFiles/drone_test_generate_messages_lisp.dir/progress.make
 
 CMakeFiles/drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/detection.lisp
 CMakeFiles/drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/code.lisp
+CMakeFiles/drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/Y_Serial_port.lisp
 
 
 /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/detection.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -67,9 +68,15 @@ CMakeFiles/drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from drone_test/code.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/oem/catkin_ws/src/drone_test/msg/code.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg
 
+/home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/Y_Serial_port.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/Y_Serial_port.lisp: /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from drone_test/Y_Serial_port.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg
+
 drone_test_generate_messages_lisp: CMakeFiles/drone_test_generate_messages_lisp
 drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/detection.lisp
 drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/code.lisp
+drone_test_generate_messages_lisp: /home/oem/catkin_ws/devel/.private/drone_test/share/common-lisp/ros/drone_test/msg/Y_Serial_port.lisp
 drone_test_generate_messages_lisp: CMakeFiles/drone_test_generate_messages_lisp.dir/build.make
 
 .PHONY : drone_test_generate_messages_lisp

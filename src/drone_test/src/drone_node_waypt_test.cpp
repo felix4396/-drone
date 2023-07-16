@@ -34,9 +34,9 @@
 using namespace std;
 using namespace mavros_msgs;
 #define Point_P_x 0.0012
-#define Point_D_x 0 //0.001
+#define Point_D_x 0 // 0.001
 #define Point_P_y 0.0012
-#define Point_D_y 0 //0.001
+#define Point_D_y 0 // 0.001
 typedef struct
 {
 	double x;
@@ -82,7 +82,7 @@ geometry_msgs::Point PD_Controller::compute(geometry_msgs::Point error)
 	return output;
 }
 
-//Set global variables
+// Set global variables
 mavros_msgs::State current_state;
 geometry_msgs::PoseStamped current_pose;
 geometry_msgs::PoseStamped pose;
@@ -103,9 +103,9 @@ ros::Publisher set_raw_pub;
 ros::Publisher local_pos_pub;
 ros::Publisher mode_pub;
 ros::Publisher capture_pub;
-int red_count=0;
+int red_count = 0;
 /***************************************call backs********************************************/
-//get state
+// get state
 void state_cb(const mavros_msgs::State::ConstPtr &msg)
 {
 	current_state = *msg;
@@ -113,11 +113,11 @@ void state_cb(const mavros_msgs::State::ConstPtr &msg)
 	bool armed = current_state.armed;
 }
 
-//get current position of drone
+// get current position of drone
 void pose_cb(const geometry_msgs::PoseStamped::ConstPtr &msg)
 {
 	current_pose = *msg;
-	//ROS_INFO("x: %f y: %f z: %f", current_pose.pose.position.x, current_pose.pose.position.y, current_pose.pose.position.z);
+	// ROS_INFO("x: %f y: %f z: %f", current_pose.pose.position.x, current_pose.pose.position.y, current_pose.pose.position.z);
 	tf2::Quaternion q(
 		current_pose.pose.orientation.x,
 		current_pose.pose.orientation.y,
@@ -127,7 +127,7 @@ void pose_cb(const geometry_msgs::PoseStamped::ConstPtr &msg)
 	double roll, pitch, yaw;
 	m.getRPY(roll, pitch, yaw);
 	current_heading.data = yaw;
-//	ROS_INFO("yaw: %f", current_heading.data);
+	//	ROS_INFO("yaw: %f", current_heading.data);
 }
 
 void point_cb(const geometry_msgs::Point::ConstPtr &msg)
@@ -160,12 +160,12 @@ void camera_front_cb(const geometry_msgs::Point::ConstPtr &msg)
 void front_dis_cb(const sensor_msgs::Range::ConstPtr &msg)
 {
 	front_dis = *msg;
-//	ROS_INFO("range is %f",front_dis.range);
+	//	ROS_INFO("range is %f",front_dis.range);
 }
 
 /***************************************call backs end****************************************/
 
-//set orientation of the drone (drone should always be level)
+// set orientation of the drone (drone should always be level)
 
 /*
 Heading sets the yaw of base_link in snapshot_takeoff in rad
@@ -174,12 +174,12 @@ Thus,the x axis of snapshot_takeoff is 0 rad.
 must call send_tf_snapshot_takeoff before takeoff to take a snapshot.
 */
 /*不允许不断调用，只能调用一次后等完成再调用。*/
-void set_pose_local(float x, float y, float z, float heading) //x y z is in reference to the body (base_link) frame captured when taking off
+void set_pose_local(float x, float y, float z, float heading) // x y z is in reference to the body (base_link) frame captured when taking off
 {
-	heading = heading + GYM_OFFSET; //Sent pose gets transformed from ENU to NED later in order to be sent to FCU.
-	float yaw = heading;			//YAW: from X(E) to Y(N) in ENU frame with X(E) axis being 0 deg
-	float pitch = 0;				//level
-	float roll = 0;					//level
+	heading = heading + GYM_OFFSET; // Sent pose gets transformed from ENU to NED later in order to be sent to FCU.
+	float yaw = heading;			// YAW: from X(E) to Y(N) in ENU frame with X(E) axis being 0 deg
+	float pitch = 0;				// level
+	float roll = 0;					// level
 
 	float cy = cos(yaw * 0.5);
 	float sy = sin(yaw * 0.5);
@@ -276,7 +276,7 @@ int set_servo(ros::NodeHandle &nh, bool state)
 	return 0;
 }
 
-int takeoff(ros::NodeHandle &nh, double height) //meters
+int takeoff(ros::NodeHandle &nh, double height) // meters
 {
 	ros::ServiceClient takeoff_cl = nh.serviceClient<mavros_msgs::CommandTOL>("/mavros/cmd/takeoff");
 	mavros_msgs::CommandTOL srv_takeoff;
@@ -317,7 +317,7 @@ int get_Altitude_ControlMode(ros::NodeHandle &nh)
 
 	if (mode_client_i.call(msg) && msg.response.success)
 	{
-		ROS_INFO("mode is %d",msg.response.result_param2);
+		ROS_INFO("mode is %d", msg.response.result_param2);
 		return msg.response.result_param2;
 	}
 	else
@@ -336,7 +336,7 @@ int get_Position_ControlMode(ros::NodeHandle &nh)
 
 	if (mode_client_i.call(msg) && msg.response.success)
 	{
-		ROS_INFO("mode is %d",msg.response.result_param2);
+		ROS_INFO("mode is %d", msg.response.result_param2);
 		return msg.response.result_param2;
 	}
 	else
@@ -346,7 +346,7 @@ int get_Position_ControlMode(ros::NodeHandle &nh)
 	}
 }
 
-int set_speed_body(double x, double y, double z, double yaw_rate) //flu meter/s rad/s, must set continously, or the vehicle stops after a few seconds(failsafe feature). yaw_rate = 0 when not used.
+int set_speed_body(double x, double y, double z, double yaw_rate) // flu meter/s rad/s, must set continously, or the vehicle stops after a few seconds(failsafe feature). yaw_rate = 0 when not used.
 {
 	mavros_msgs::PositionTarget raw_target;
 	raw_target.coordinate_frame = PositionTarget::FRAME_BODY_OFFSET_NED;
@@ -361,11 +361,11 @@ int set_speed_body(double x, double y, double z, double yaw_rate) //flu meter/s 
 	return 0;
 }
 
-int set_angular_rate(double yaw_rate) //FLU rad/s , must set continously, or the vehicle stops after a few seconds.(failsafe feature) used for adjusting yaw without setting others.
+int set_angular_rate(double yaw_rate) // FLU rad/s , must set continously, or the vehicle stops after a few seconds.(failsafe feature) used for adjusting yaw without setting others.
 {
 	mavros_msgs::PositionTarget raw_target;
 	raw_target.coordinate_frame = PositionTarget::FRAME_BODY_OFFSET_NED;
-	raw_target.type_mask = PositionTarget::IGNORE_VX | PositionTarget::IGNORE_VY | PositionTarget::IGNORE_VZ | PositionTarget::IGNORE_AFX | PositionTarget::IGNORE_AFY | PositionTarget::IGNORE_AFZ | PositionTarget::IGNORE_YAW; //yaw_rate must be used with pose or vel.
+	raw_target.type_mask = PositionTarget::IGNORE_VX | PositionTarget::IGNORE_VY | PositionTarget::IGNORE_VZ | PositionTarget::IGNORE_AFX | PositionTarget::IGNORE_AFY | PositionTarget::IGNORE_AFZ | PositionTarget::IGNORE_YAW; // yaw_rate must be used with pose or vel.
 	raw_target.position.x = 0;
 	raw_target.position.y = 0;
 	raw_target.position.z = 0;
@@ -375,7 +375,7 @@ int set_angular_rate(double yaw_rate) //FLU rad/s , must set continously, or the
 }
 
 /*不允许不断调用，只能调用一次后等完成再调用。*/
-int set_pose_body(double x, double y, double z, double yaw) //flu meters rad. yaw = 0 when not used. x=y=z=0 when not used.
+int set_pose_body(double x, double y, double z, double yaw) // flu meters rad. yaw = 0 when not used. x=y=z=0 when not used.
 {
 	mavros_msgs::PositionTarget raw_target;
 	raw_target.coordinate_frame = PositionTarget::FRAME_BODY_OFFSET_NED;
@@ -429,38 +429,38 @@ T bound(T const &a, T const &limit)
 }
 enum Position_ControlMode
 {
-	//控制器未打开
-	Position_ControlMode_Null = 255 ,
-	
-	//普通模式	
-	//Position_ControlMode_VelocityTrack = 16 ,	//速度控制跟踪模式
-	Position_ControlMode_Position = 12 ,	//位置锁定模式
-	Position_ControlMode_Velocity = 11 ,	//速度控制模式
-	Position_ControlMode_Locking = 10 ,	//刹车后锁位置
-	
-	//2D自动模式
-	Position_ControlMode_Takeoff = 20 ,	//起飞模式
-	Position_ControlMode_RouteLine = 22 ,	//巡线模式
-	
-	//3D自动模式
-	Position_ControlMode_RouteLine3D = 52 ,	//巡线模式
+	// 控制器未打开
+	Position_ControlMode_Null = 255,
+
+	// 普通模式
+	// Position_ControlMode_VelocityTrack = 16 ,	//速度控制跟踪模式
+	Position_ControlMode_Position = 12, // 位置锁定模式
+	Position_ControlMode_Velocity = 11, // 速度控制模式
+	Position_ControlMode_Locking = 10,	// 刹车后锁位置
+
+	// 2D自动模式
+	Position_ControlMode_Takeoff = 20,	 // 起飞模式
+	Position_ControlMode_RouteLine = 22, // 巡线模式
+
+	// 3D自动模式
+	Position_ControlMode_RouteLine3D = 52, // 巡线模式
 };
 
 int main(int argc, char **argv)
 {
-	local_point waypts[]={
+	local_point waypts[] = {
 		{1, 0, 1.0, 0},
 		{1, 1, 1.0, 0},
 		{0, 1, 1.0, 0},
 		{0, 0, 1.0, 0},
-//		{0, 0, 1.0, 0},
-//		{0, 0, 1.0, 0},		
-//		{0, 2.5, 1.4, -3.1415926/2.0}
-//		{0, 0, 1, 0},
-//		{0, 0, 0.5, 0}
+		//		{0, 0, 1.0, 0},
+		//		{0, 0, 1.0, 0},
+		//		{0, 2.5, 1.4, -3.1415926/2.0}
+		//		{0, 0, 1, 0},
+		//		{0, 0, 0.5, 0}
 	};
 	queue<local_point> waypoints;
-	for (int i=0;i<sizeof(waypts)/sizeof(local_point);i++)
+	for (int i = 0; i < sizeof(waypts) / sizeof(local_point); i++)
 	{
 		waypoints.push(waypts[i]);
 	}
@@ -473,7 +473,7 @@ int main(int argc, char **argv)
 	set_raw_pub = nh.advertise<mavros_msgs::PositionTarget>("/mavros/setpoint_raw/local", 10);
 	local_pos_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_position/local", 10);
 	/*****************************camera subs and pubs*****************************/
-    ros::Subscriber point_sub = nh.subscribe<geometry_msgs::Point>("/camera_down/pose", 10, point_cb);
+	ros::Subscriber point_sub = nh.subscribe<geometry_msgs::Point>("/camera_down/pose", 10, point_cb);
 	mode_pub = nh.advertise<std_msgs::Int8>("/camera_down/mode", 10);
 	// ros::Subscriber camera_front_sub = nh.subscribe<geometry_msgs::Point>("/camera_front/vertex", 10, camera_front_cb);
 	// capture_pub = nh.advertise<std_msgs::Int8>("/camera_front/capture", 10);
@@ -482,7 +482,7 @@ int main(int argc, char **argv)
 	/*****************************camera subs and pubs end*************************/
 
 	ros::Subscriber currentPos = nh.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose", 10, pose_cb);
-//	ros::Subscriber front_dis_sub = nh.subscribe<sensor_msgs::Range>("/mavros/distance_sensor/rangefinder_pub", 10, front_dis_cb);
+	//	ros::Subscriber front_dis_sub = nh.subscribe<sensor_msgs::Range>("/mavros/distance_sensor/rangefinder_pub", 10, front_dis_cb);
 	tf2_ros::TransformListener tfListener(tfBuffer);
 
 	PD_Controller Point_Controller(Point_P_x, Point_D_x, Point_P_y, Point_D_y);
@@ -494,8 +494,7 @@ int main(int argc, char **argv)
 		ros::spinOnce();
 		ros::Duration(0.01).sleep();
 	}
-
-	while (current_state.mode != "OFFBOARD") //wait for remote command
+	while (current_state.mode != "OFFBOARD") // wait for remote command
 	{
 		ros::spinOnce();
 		ros::Duration(0.01).sleep();
@@ -511,9 +510,9 @@ int main(int argc, char **argv)
 		ros::spinOnce();
 		rate.sleep();
 	}
-//	get_Altitude_ControlMode(nh);
-//	get_Position_ControlMode(nh);
-	//arm
+	//	get_Altitude_ControlMode(nh);
+	//	get_Position_ControlMode(nh);
+	// arm
 	arm_drone(nh);
 	while (ros::ok() && !current_state.armed)
 	{
@@ -521,29 +520,30 @@ int main(int argc, char **argv)
 		rate.sleep();
 	}
 	send_tf_snapshot_takeoff();
-	//request takeoff
-	takeoff(nh, 1.0); //meters
+	// request takeoff
+	takeoff(nh, 1.0); // meters
 
 	ros::spinOnce();
 
-	while(get_Altitude_ControlMode(nh)!=Position_ControlMode_Position)//wait for takeoff
+	while (get_Altitude_ControlMode(nh) != Position_ControlMode_Position) // wait for takeoff
 	{
 		ros::spinOnce();
 		rate.sleep();
 	}
 	rate.sleep();
 	ros::spinOnce();
-	double last_waypt_yaw=0;
-	local_point current_waypt=waypoints.front();
-	set_pose_local(current_waypt.x,current_waypt.y,current_waypt.z,current_waypt.yaw);
+	double last_waypt_yaw = 0;
+	local_point current_waypt = waypoints.front();
+	set_pose_local(current_waypt.x, current_waypt.y, current_waypt.z, current_waypt.yaw);
 
-	while(!waypoints.empty())
+	while (!waypoints.empty())
 	{
-		if(0)
-		{}
+		if (0)
+		{
+		}
 		else
 		{
-			current_waypt=waypoints.front();
+			current_waypt = waypoints.front();
 			/***in position?***/
 			geometry_msgs::TransformStamped transformStamped;
 			geometry_msgs::PointStamped initial_pt, transformed_pt;
@@ -561,27 +561,27 @@ int main(int argc, char **argv)
 				ros::Duration(1.0).sleep();
 				return -1;
 			}
-			if((abs(current_pose.pose.position.x-transformed_pt.point.x)<=0.05)&&(abs(current_pose.pose.position.y-transformed_pt.point.y)<=0.05)&&(abs(current_pose.pose.position.z-transformed_pt.point.z)<=0.05))
+			if ((abs(current_pose.pose.position.x - transformed_pt.point.x) <= 0.05) && (abs(current_pose.pose.position.y - transformed_pt.point.y) <= 0.05) && (abs(current_pose.pose.position.z - transformed_pt.point.z) <= 0.05))
 			{
 				waypoints.pop();
-				current_waypt=waypoints.front();
-				set_pose_local(current_waypt.x,current_waypt.y,current_waypt.z,current_waypt.yaw);
-				if(abs(last_waypt_yaw-current_waypt.yaw)>=0.01)
+				current_waypt = waypoints.front();
+				set_pose_local(current_waypt.x, current_waypt.y, current_waypt.z, current_waypt.yaw);
+				if (abs(last_waypt_yaw - current_waypt.yaw) >= 0.01)
 				{
-					for (int i = 0; i < 300; i++) //3s,wait for spin
+					for (int i = 0; i < 300; i++) // 3s,wait for spin
 					{
 						ros::spinOnce();
 						ros::Duration(0.01).sleep();
 					}
 				}
-				last_waypt_yaw=current_waypt.yaw;
+				last_waypt_yaw = current_waypt.yaw;
 			}
 		}
 
 		ros::spinOnce();
-		ros::Duration(0.01).sleep();//100hz
+		ros::Duration(0.01).sleep(); // 100hz
 	}
-	//land
+	// land
 	land(nh);
 	while (ros::ok())
 	{

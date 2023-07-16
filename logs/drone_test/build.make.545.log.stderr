@@ -1,0 +1,22 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:11:21:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar**[m[K’ [[01;31m[K-fpermissive[m[K]
+   11 |     ros::init(argc, [01;31m[Kargc[m[K, "Imu_node");
+      |                     [01;31m[K^~~~[m[K
+      |                     [01;31m[K|[m[K
+      |                     [01;31m[Kint[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/node_handle.h:47[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/init.h:83:41:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid ros::init(int&, char**, const string&, uint32_t)[m[K’
+   83 | ROSCPP_DECL void init(int &argc, [01;36m[Kchar **argv[m[K, const std::string& name, uint32_t options = 0);
+      |                                  [01;36m[K~~~~~~~^~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:48:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_pub[m[K’ was not declared in this scope; did you mean ‘[01m[Kread_port[m[K’?
+   48 |             [01;31m[Kread_pub[m[K.publish(result);
+      |             [01;31m[K^~~~~~~~[m[K
+      |             [32m[Kread_port[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kr[m[K’ was not declared in this scope
+   52 |         [01;31m[Kr[m[K.sleep();
+      |         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/serial_port.dir/build.make:63：CMakeFiles/serial_port.dir/src/serial_port.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:306：CMakeFiles/serial_port.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

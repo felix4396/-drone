@@ -1,0 +1,1 @@
+/home/oem/catkin_ws/devel/.private/drone_test/share/roseus/ros/drone_test/msg/Y_Serial_port.l

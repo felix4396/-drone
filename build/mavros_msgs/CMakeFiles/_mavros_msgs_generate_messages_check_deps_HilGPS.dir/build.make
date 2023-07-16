@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/oem/catkin_ws/build/mavros_msgs
 include CMakeFiles/_mavros_msgs_generate_messages_check_deps_HilGPS.dir/progress.make
 
 CMakeFiles/_mavros_msgs_generate_messages_check_deps_HilGPS:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mavros_msgs /home/oem/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg geographic_msgs/GeoPoint:std_msgs/Header
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mavros_msgs /home/oem/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg std_msgs/Header:geographic_msgs/GeoPoint
 
 _mavros_msgs_generate_messages_check_deps_HilGPS: CMakeFiles/_mavros_msgs_generate_messages_check_deps_HilGPS
 _mavros_msgs_generate_messages_check_deps_HilGPS: CMakeFiles/_mavros_msgs_generate_messages_check_deps_HilGPS.dir/build.make

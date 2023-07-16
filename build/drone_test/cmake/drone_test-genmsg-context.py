@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/oem/catkin_ws/src/drone_test/msg/detection.msg;/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+messages_str = "/home/oem/catkin_ws/src/drone_test/msg/detection.msg;/home/oem/catkin_ws/src/drone_test/msg/code.msg;/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
 services_str = ""
 pkg_name = "drone_test"
 dependencies_str = "geometry_msgs;mavros_msgs;std_msgs;geographic_msgs"

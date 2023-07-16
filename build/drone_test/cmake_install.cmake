@@ -132,6 +132,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_test/msg" TYPE FILE FILES
     "/home/oem/catkin_ws/src/drone_test/msg/detection.msg"
     "/home/oem/catkin_ws/src/drone_test/msg/code.msg"
+    "/home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg"
     )
 endif()
 

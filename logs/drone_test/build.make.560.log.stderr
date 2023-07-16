@@ -1,0 +1,7 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/serial_port.cpp:6:10:[m[K [01;31m[Kfatal error: [m[Kano_tc_v4/sdk_ano_tc_v4.hpp: 没有那个文件或目录
+    6 | #include [01;31m[K"ano_tc_v4/sdk_ano_tc_v4.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/serial_port.dir/build.make:63：CMakeFiles/serial_port.dir/src/serial_port.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:306：CMakeFiles/serial_port.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

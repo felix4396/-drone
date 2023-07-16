@@ -20,6 +20,7 @@ class detection {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.erro_x = null;
       this.erro_y = null;
+      this.erro_z = null;
       this.flag = null;
       this.start_opencv = null;
     }
@@ -35,6 +36,12 @@ class detection {
       }
       else {
         this.erro_y = 0.0;
+      }
+      if (initObj.hasOwnProperty('erro_z')) {
+        this.erro_z = initObj.erro_z
+      }
+      else {
+        this.erro_z = 0.0;
       }
       if (initObj.hasOwnProperty('flag')) {
         this.flag = initObj.flag
@@ -57,10 +64,12 @@ class detection {
     bufferOffset = _serializer.float64(obj.erro_x, buffer, bufferOffset);
     // Serialize message field [erro_y]
     bufferOffset = _serializer.float64(obj.erro_y, buffer, bufferOffset);
+    // Serialize message field [erro_z]
+    bufferOffset = _serializer.float64(obj.erro_z, buffer, bufferOffset);
     // Serialize message field [flag]
-    bufferOffset = _serializer.int8(obj.flag, buffer, bufferOffset);
+    bufferOffset = _serializer.uint8(obj.flag, buffer, bufferOffset);
     // Serialize message field [start_opencv]
-    bufferOffset = _serializer.int8(obj.start_opencv, buffer, bufferOffset);
+    bufferOffset = _serializer.uint8(obj.start_opencv, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -72,15 +81,17 @@ class detection {
     data.erro_x = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [erro_y]
     data.erro_y = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [erro_z]
+    data.erro_z = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [flag]
-    data.flag = _deserializer.int8(buffer, bufferOffset);
+    data.flag = _deserializer.uint8(buffer, bufferOffset);
     // Deserialize message field [start_opencv]
-    data.start_opencv = _deserializer.int8(buffer, bufferOffset);
+    data.start_opencv = _deserializer.uint8(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 18;
+    return 26;
   }
 
   static datatype() {
@@ -90,7 +101,7 @@ class detection {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '5758eab71db35db21ff4cedc29365b18';
+    return '156cdb81e2b7ac989e48faaa7c1e6124';
   }
 
   static messageDefinition() {
@@ -98,8 +109,9 @@ class detection {
     return `
     float64 erro_x
     float64 erro_y
-    int8 flag
-    int8 start_opencv
+    float64 erro_z
+    uint8 flag
+    uint8 start_opencv
     `;
   }
 
@@ -121,6 +133,13 @@ class detection {
     }
     else {
       resolved.erro_y = 0.0
+    }
+
+    if (msg.erro_z !== undefined) {
+      resolved.erro_z = msg.erro_z;
+    }
+    else {
+      resolved.erro_z = 0.0
     }
 
     if (msg.flag !== undefined) {

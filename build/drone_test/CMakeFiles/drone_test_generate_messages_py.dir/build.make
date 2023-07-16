@@ -55,6 +55,7 @@ include CMakeFiles/drone_test_generate_messages_py.dir/progress.make
 
 CMakeFiles/drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_detection.py
 CMakeFiles/drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_code.py
+CMakeFiles/drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_Y_Serial_port.py
 CMakeFiles/drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py
 
 
@@ -68,15 +69,22 @@ CMakeFiles/drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG drone_test/code"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/oem/catkin_ws/src/drone_test/msg/code.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg
 
+/home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_Y_Serial_port.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_Y_Serial_port.py: /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG drone_test/Y_Serial_port"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/oem/catkin_ws/src/drone_test/msg/Y_Serial_port.msg -Idrone_test:/home/oem/catkin_ws/src/drone_test/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Imavros_msgs:/home/oem/catkin_ws/src/mavros/mavros_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeographic_msgs:/opt/ros/noetic/share/geographic_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iuuid_msgs:/opt/ros/noetic/share/uuid_msgs/cmake/../msg -p drone_test -o /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg
+
 /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_detection.py
 /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_code.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for drone_test"
+/home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_Y_Serial_port.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oem/catkin_ws/build/drone_test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for drone_test"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg --initpy
 
 drone_test_generate_messages_py: CMakeFiles/drone_test_generate_messages_py
 drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_detection.py
 drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_code.py
+drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/_Y_Serial_port.py
 drone_test_generate_messages_py: /home/oem/catkin_ws/devel/.private/drone_test/lib/python3/dist-packages/drone_test/msg/__init__.py
 drone_test_generate_messages_py: CMakeFiles/drone_test_generate_messages_py.dir/build.make
 
