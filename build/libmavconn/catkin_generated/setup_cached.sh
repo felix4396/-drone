@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/oem/catkin_ws/devel/.private/libmavconn:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/oem/catkin_ws/devel/.private/libmavconn/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/oem/catkin_ws/devel/.private/libmavconn/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/oem/catkin_ws/build/libmavconn'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/oem/catkin_ws/devel/.private/libmavconn/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/oem/catkin_ws/src/mavros/libmavconn:$ROS_PACKAGE_PATH"

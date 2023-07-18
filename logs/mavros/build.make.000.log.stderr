@@ -1,23 +1,23 @@
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_to_string.cpp:19[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_sensor_orientation.cpp:17[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
       |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_to_string.cpp:19[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_sensor_orientation.cpp:17[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
       |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_sensor_orientation.cpp:17[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_to_string.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
       |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_sensor_orientation.cpp:17[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/lib/enum_to_string.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -121,8 +121,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros.h:24[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/mavros_node.cpp:14[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/command.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
@@ -130,24 +129,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros.h:24[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/mavros_node.cpp:14[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
-      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/altitude.cpp:17[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
-      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/altitude.cpp:17[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/command.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -171,7 +153,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/actuator_control.cpp:17[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/3dr_radio.cpp:17[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
@@ -180,6 +162,56 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/actuator_control.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
+      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/3dr_radio.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
+      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/actuator_control.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
+      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/altitude.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
+      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/altitude.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
+      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros.h:24[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/mavros_node.cpp:14[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
+      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros.h:24[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/mavros_node.cpp:14[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -196,38 +228,6 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/ftp.cpp:20[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
-      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/3dr_radio.cpp:17[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
-      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/3dr_radio.cpp:17[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
-      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/command.cpp:19[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
-      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/command.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -283,7 +283,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/imu.cpp:18[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/local_position.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
@@ -291,7 +291,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/imu.cpp:18[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/local_position.cpp:19[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -299,7 +299,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/local_position.cpp:19[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/imu.cpp:18[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
@@ -307,7 +307,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/local_position.cpp:19[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/imu.cpp:18[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -391,22 +391,6 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_position.cpp:17[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
-      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_position.cpp:17[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
-      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_attitude.cpp:18[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
@@ -432,6 +416,22 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_raw.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
+      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_position.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
+      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/setpoint_position.cpp:17[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -487,22 +487,6 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/vfr_hud.cpp:18[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
-      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/vfr_hud.cpp:18[m[K:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
-[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
-  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
-      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
-In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/sys_time.cpp:17[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
@@ -519,7 +503,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/waypoint.cpp:23[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/vfr_hud.cpp:18[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
    74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
@@ -527,7 +511,7 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
 In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
-                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/waypoint.cpp:23[m[K:
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/vfr_hud.cpp:18[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
@@ -544,6 +528,22 @@ In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavr
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
                  from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/wind_estimation.cpp:17[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+  108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);
+      |                                                         [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/waypoint.cpp:23[m[K:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const Mavlink&, mavlink::mavlink_message_t&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:74:63:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
+   74 |  std::copy(rmsg.payload64.begin(), rmsg.payload64.end(), [01;35m[Kmmsg.payload64[m[K);
+      |                                                          [01;35m[K~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/utils.h:22[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_uas.h:30[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/include/mavros/mavros_plugin.h:25[m[K,
+                 from [01m[K/home/oem/catkin_ws/src/mavros/mavros/src/plugins/waypoint.cpp:23[m[K:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:[m[K In function ‘[01m[Kbool mavros_msgs::mavlink::convert(const mavlink_message_t&, mavros_msgs::Mavlink&, uint8_t)[m[K’:
 [01m[K/home/oem/catkin_ws/src/mavros/mavros_msgs/include/mavros_msgs/mavlink_convert.h:108:62:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[Kmavlink::__mavlink_message[m[K’ may result in an unaligned pointer value [[01;35m[K-Waddress-of-packed-member[m[K]
   108 |  rmsg.payload64 = mavros_msgs::Mavlink::_payload64_type([01;35m[Kmmsg.payload64[m[K, mmsg.payload64 + payload64_len);

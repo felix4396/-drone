@@ -351,6 +351,8 @@ std_msgs/Bool.h
 /home/oem/catkin_ws/src/drone_test/src/std_msgs/Bool.h
 geometry_msgs/PoseStamped.h
 /home/oem/catkin_ws/src/drone_test/src/geometry_msgs/PoseStamped.h
+geometry_msgs/TwistWithCovarianceStamped.h
+/home/oem/catkin_ws/src/drone_test/src/geometry_msgs/TwistWithCovarianceStamped.h
 nav_msgs/Odometry.h
 -
 sys/time.h
@@ -640,6 +642,26 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 geometry_msgs/Twist.h
+-
+
+/opt/ros/noetic/include/geometry_msgs/TwistWithCovarianceStamped.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/TwistWithCovariance.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Vector3.h

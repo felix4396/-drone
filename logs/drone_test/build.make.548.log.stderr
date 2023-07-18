@@ -1,5 +1,0 @@
-/usr/bin/ld: 找不到 -lserial
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/serial_port.dir/build.make:119：/home/oem/catkin_ws/devel/.private/drone_test/lib/drone_test/serial_port] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:307：CMakeFiles/serial_port.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

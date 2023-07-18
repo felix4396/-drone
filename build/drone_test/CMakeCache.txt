@@ -568,15 +568,6 @@ rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 
-//The directory containing a CMake configuration file for serial.
-serial_DIR:PATH=/opt/ros/noetic/share/serial/cmake
-
-//Dependencies for the target
-serial_LIB_DEPENDS:STATIC=general;rt;
-
-//The directory containing a CMake configuration file for serial_port.
-serial_port_DIR:PATH=serial_port_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
 
@@ -594,9 +585,6 @@ tf2_py_DIR:PATH=/opt/ros/noetic/share/tf2_py/cmake
 
 //The directory containing a CMake configuration file for tf2_ros.
 tf2_ros_DIR:PATH=/opt/ros/noetic/share/tf2_ros/cmake
-
-//The directory containing a CMake configuration file for tf2_sensor_msgs.
-tf2_sensor_msgs_DIR:PATH=/opt/ros/noetic/share/tf2_sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake

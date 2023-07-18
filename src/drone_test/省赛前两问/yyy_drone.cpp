@@ -60,6 +60,7 @@ float posy_t265_local;
 float posz_t265_local;
 drone_test::detection yopcv;
 drone_test::detection yopcv3;
+drone_test::detection yopcv_change;
 
 // 飞控状态
 int Alt_mode;
@@ -70,7 +71,7 @@ float yaw;
 
 // 按钮状态(Jeston nano)
 // char bz_button_last = 0, bz_button = 0, state_button = 0;
-int bz_state_0 = 0, bz_state_1 = 6, bz_state_2 = 5;
+int bz_state_0 = 0, bz_state_1 = 7, bz_state_2 = 2;
 
 // 图像消息_速度
 double opencv_erro_x = 0;
@@ -94,6 +95,7 @@ int forth_lev[1] = {5};
 
 int fly_state = 0;
 int fly_tar[2] = {bz_state_1, bz_state_2};
+int flag_xy = 0;
 /*----------------------------------------------------------------------------------------------------------------------------------- */
 enum Position_ControlMode
 {
@@ -149,9 +151,9 @@ void doOpencv_sub(const drone_test::detection::ConstPtr &msg)
 void pose_cb(const geometry_msgs::PoseStamped::ConstPtr &msg)
 {
     current_pose = *msg;
-    now_position[0] = current_pose.pose.position.x + 0.75 + 0.5;
-    now_position[1] = current_pose.pose.position.y + 0.75;
-    ROS_INFO("x: %f y: %f", now_position[0], now_position[1]);
+    now_position[0] = current_pose.pose.position.x;
+    now_position[1] = current_pose.pose.position.y;
+    // ROS_INFO("x: %f y: %f", now_position[0], now_position[1]);
 }
 
 void PosAlt_state_cb(const mavros_msgs::DebugValue::ConstPtr &msg) // 状态机
@@ -380,6 +382,7 @@ int main(int argc, char **argv)
     ros::Subscriber Opencv_sub = nh.subscribe<drone_test::detection>("detection", 1, doOpencv_sub);
     ros::Publisher detection_pub = nh.advertise<drone_test::detection>("detection_2", 10);
     ros::Publisher array_pub = nh.advertise<drone_test::detection>("detection_3", 10);
+    ros::Publisher array_change_pub = nh.advertise<drone_test::detection>("detection_change", 10);
 
     /*----------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -521,7 +524,12 @@ CHECK:
                         ros::spinOnce();
                         ROS_INFO("NOW X=%.1f,Y=%.1f", now_position[0], now_position[1]);
 
-                        int flag_xy = 0;
+                        yopcv_change.flag = 0;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        flag_xy = 0;
                         do
                         {
                             rate.sleep();
@@ -530,8 +538,49 @@ CHECK:
                             {
                                 flag_xy++;
                             }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
                             set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
                         } while (ros::ok() && flag_xy < 5);
+
+                        yopcv_change.flag = 1;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        set_pose_body(0.0, 0.0, -0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
+
+                        flag_xy = 0;
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                            if (abs(opencv_erro_x) < min_stop_vel && abs(opencv_erro_y) < min_stop_vel)
+                            {
+                                flag_xy++;
+                            }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
+                            set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
+                        } while (ros::ok() && flag_xy < 5);
+
+                        set_pose_body(0.0, 0.0, 0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
 
                         fly_state = 0;
                         ros::Duration(2).sleep();
@@ -575,8 +624,12 @@ CHECK:
                         } while (ros::ok() && Pos_mode != Position_ControlMode_Position);
                         ros::spinOnce();
                         ROS_INFO("NOW X=%.1f,Y=%.1f", now_position[0], now_position[1]);
+                        yopcv_change.flag = 0;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
 
-                        int flag_xy = 0;
+                        flag_xy = 0;
                         do
                         {
                             rate.sleep();
@@ -585,8 +638,49 @@ CHECK:
                             {
                                 flag_xy++;
                             }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
                             set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
                         } while (ros::ok() && flag_xy < 5);
+
+                        yopcv_change.flag = 1;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        set_pose_body(0.0, 0.0, -0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
+
+                        flag_xy = 0;
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                            if (abs(opencv_erro_x) < min_stop_vel && abs(opencv_erro_y) < min_stop_vel)
+                            {
+                                flag_xy++;
+                            }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
+                            set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
+                        } while (ros::ok() && flag_xy < 5);
+
+                        set_pose_body(0.0, 0.0, 0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
 
                         fly_state = 0;
                         ros::Duration(2).sleep();
@@ -630,7 +724,12 @@ CHECK:
                         ros::spinOnce();
                         ROS_INFO("NOW X=%.1f,Y=%.1f", now_position[0], now_position[1]);
 
-                        int flag_xy = 0;
+                        yopcv_change.flag = 0;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        flag_xy = 0;
                         do
                         {
                             rate.sleep();
@@ -639,8 +738,49 @@ CHECK:
                             {
                                 flag_xy++;
                             }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
                             set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
                         } while (ros::ok() && flag_xy < 5);
+
+                        yopcv_change.flag = 1;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        set_pose_body(0.0, 0.0, -0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
+
+                        flag_xy = 0;
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                            if (abs(opencv_erro_x) < min_stop_vel && abs(opencv_erro_y) < min_stop_vel)
+                            {
+                                flag_xy++;
+                            }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
+                            set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
+                        } while (ros::ok() && flag_xy < 5);
+
+                        set_pose_body(0.0, 0.0, 0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
 
                         fly_state = 0;
                         ros::Duration(2).sleep();
@@ -685,7 +825,12 @@ CHECK:
                         ros::spinOnce();
                         ROS_INFO("NOW X=%.1f,Y=%.1f", now_position[0], now_position[1]);
 
-                        int flag_xy = 0;
+                        yopcv_change.flag = 0;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        flag_xy = 0;
                         do
                         {
                             rate.sleep();
@@ -694,8 +839,49 @@ CHECK:
                             {
                                 flag_xy++;
                             }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
                             set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
                         } while (ros::ok() && flag_xy < 5);
+
+                        yopcv_change.flag = 1;
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+                        array_change_pub.publish(yopcv_change);
+
+                        set_pose_body(0.0, 0.0, -0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
+
+                        flag_xy = 0;
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                            if (abs(opencv_erro_x) < min_stop_vel && abs(opencv_erro_y) < min_stop_vel)
+                            {
+                                flag_xy++;
+                            }
+                            else
+                            {
+                                flag_xy = 0;
+                            }
+                            set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
+                        } while (ros::ok() && flag_xy < 5);
+
+                        set_pose_body(0.0, 0.0, 0.6, 0.0);
+                        ros::Duration(0.5).sleep();
+                        do
+                        {
+                            rate.sleep();
+                            ros::spinOnce();
+                        } while (ros::ok() && Alt_mode != Position_ControlMode_Position);
 
                         fly_state = 0;
                         ros::Duration(2).sleep();
@@ -719,7 +905,7 @@ CHECK:
     } while (ros::ok() && Pos_mode != Position_ControlMode_Position);
     ros::spinOnce();
     ROS_INFO("NOW X=%.1f,Y=%.1f", now_position[0], now_position[1]);
-    int flag_xy = 0;
+    flag_xy = 0;
     do
     {
         rate.sleep();
@@ -727,6 +913,10 @@ CHECK:
         if (abs(opencv_erro_x) < min_stop_vel && abs(opencv_erro_y) < min_stop_vel)
         {
             flag_xy++;
+        }
+        else
+        {
+            flag_xy = 0;
         }
         set_speed_body(opencv_erro_y, opencv_erro_x, 0.0, 0.0);
     } while (ros::ok() && flag_xy < 5);

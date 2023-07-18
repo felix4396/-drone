@@ -1,0 +1,10 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:[m[K In function ‘[01m[Kvoid set_break_2D_speed()[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:475:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  475 |             flag_stop++
+      |                        [01;31m[K^[m[K
+      |                        [32m[K;[m[K
+  476 |         [32m[K}[m[K
+      |         [32m[K~[m[K               
+make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:63：CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:305：CMakeFiles/yyy_drone.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

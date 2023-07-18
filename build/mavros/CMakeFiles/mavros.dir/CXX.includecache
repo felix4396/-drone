@@ -1836,6 +1836,16 @@ mavros/utils.h
 ros/console.h
 -
 
+/home/oem/catkin_ws/src/mavros/mavros/src/lib/ftf_frame_conversions.cpp
+mavros/frame_tf.h
+-
+stdexcept
+-
+
+/home/oem/catkin_ws/src/mavros/mavros/src/lib/ftf_quaternion_utils.cpp
+mavros/frame_tf.h
+-
+
 /home/oem/catkin_ws/src/mavros/mavros/src/lib/mavlink_diag.cpp
 mavros/mavlink_diag.h
 -
@@ -1856,6 +1866,10 @@ mavconn/mavlink_dialect.h
 mavconn/udp.h
 -
 std_msgs/String.h
+-
+
+/home/oem/catkin_ws/src/mavros/mavros/src/lib/rosconsole_bridge.cpp
+rosconsole_bridge/bridge.h
 -
 
 /home/oem/catkin_ws/src/mavros/mavros/src/lib/uas_data.cpp
@@ -3047,6 +3061,12 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
+
+/opt/ros/noetic/include/rosconsole_bridge/bridge.h
+ros/macros.h
+-
+console_bridge/console.h
+-
 
 /opt/ros/noetic/include/sensor_msgs/Imu.h
 string

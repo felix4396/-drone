@@ -26,22 +26,26 @@ int minH_2 = 0, maxH_2 = 180;
 int minS_2 = 0, maxS_2 = 80;
 int minV_2 = 40, maxV_2 = 92;
 
-int shape_detection(Mat src, int shape);                            // 圆轮廓检测，输入是经hsv处理的二值图、需要检测的图形,输出1、2、3分别为三角形、矩形、圆形,输出0表示没找到
-vector<int> trans_flag(int flag_num);                               // 将地图上的数值转换成颜色、形状特征
-Mat get_color_mask(Mat src, int color);                             // 根据颜色输出对应的hsv二值图
-void doOpencv_sub(const drone_test::detection::ConstPtr &msg);      // 回调函数
-void doOpencv_sub_flag(const drone_test::detection::ConstPtr &msg); // 回调函数
-void back_position(Mat src);                                        // 返航点检测
+int shape_detection(Mat src, int shape);                                   // 圆轮廓检测，输入是经hsv处理的二值图、需要检测的图形,输出1、2、3分别为三角形、矩形、圆形,输出0表示没找到
+vector<int> trans_flag(int flag_num);                                      // 将地图上的数值转换成颜色、形状特征
+Mat get_color_mask(Mat src, int color);                                    // 根据颜色输出对应的hsv二值图
+void doOpencv_sub(const drone_test::detection::ConstPtr &msg);             // 回调函数
+void doOpencv_sub_flag(const drone_test::detection::ConstPtr &msg);        // 回调函数
+void doOpencv_sub_change_flag(const drone_test::detection::ConstPtr &msg); // 回调函数
+void back_position(Mat src);                                               // 返航点检测
 
 Mat frame;
-int f1 = 0;
+int f1 = 10;
 int f2 = 0;                 // 指定位置编号
 int color_flag, shape_flag; // 颜色、形状标志位，
 int shape_code = 0;         // 形状检测返回值
 double dt = 1.0;            // PID控制器采样时间
-int start_opencv = 0;       // 检测标志位
+int start_opencv = 1;       // 检测标志位
+int status = 0;
+int target_y = 240;
 double dx = 0.0;
 double dy = 0.0; // 机器人需要移动的距离的pid控制量
+static int cnt = 0;
 
 // PID控制器类
 class PIDController
@@ -90,6 +94,7 @@ int main(int argc, char **argv)
     ros::Publisher detection_pub = nh.advertise<drone_test::detection>("detection", 1000);
     ros::Subscriber Opencv_sub = nh.subscribe<drone_test::detection>("detection_2", 10, doOpencv_sub);
     ros::Subscriber Opencv_sub_flag = nh.subscribe<drone_test::detection>("detection_3", 10, doOpencv_sub_flag);
+    ros::Subscriber Opencv_sub_change_flag = nh.subscribe<drone_test::detection>("detection_change", 10, doOpencv_sub_change_flag);
 
     // 设置循环的频率
     ros::Rate rate(20);
@@ -130,6 +135,11 @@ int main(int argc, char **argv)
         // 读取视频帧
         cap >> frame;
 
+        if (frame.empty())
+        {
+            cout << "Failed to read frame." << endl;
+            continue;
+        }
         // 模式1，检测图像中的颜色、形状特征输出偏差
         if (start_opencv == 1)
         {
@@ -265,16 +275,26 @@ int shape_detection(Mat src, int shape)
             }
             if (flag == shape)
             {
+                if (status == 0)
+                {
+                    target_y = 160;
+                }
+                else if (status == 1)
+                {
+                    target_y = 100;
+                }
                 // 求解轮廓中心点?
                 Moments moments = cv::moments(contours[i]);
                 double cx = moments.m10 / moments.m00; // X坐标的中心
                 double cy = moments.m01 / moments.m00; // Y坐标的中心
                 dx = pid_controller_dx.update(frame.cols * 0.5, cx);
-                dy = pid_controller_dy.update(frame.rows * 0.5, cy);
+                dy = pid_controller_dy.update(target_y, cy);
+                ROS_INFO("cx=%f", cx);
+                ROS_INFO("cy=%f", cy);
                 // cout << "dx=" << dx << endl;
                 // cout << "dy=" << dy << endl;
-                ROS_INFO("dx=%f", dx);
-                ROS_INFO("dy=%f", dy);
+                // ROS_INFO("dx=%f", dx);
+                // ROS_INFO("dy=%f", dy);
                 cv::circle(frame, cv::Point(cx, cy), 3, cv::Scalar(0, 255, 0), cv::FILLED);
             }
         }
@@ -375,6 +395,12 @@ void doOpencv_sub_flag(const drone_test::detection::ConstPtr &msg)
     f2 = msg->start_opencv;
 }
 
+void doOpencv_sub_change_flag(const drone_test::detection::ConstPtr &msg)
+{
+
+    status = msg->flag;
+}
+
 void back_position(Mat src)
 {
     Mat hsv;
@@ -425,7 +451,7 @@ void back_position(Mat src)
                 double cx = moments.m10 / moments.m00; // X坐标的中心
                 double cy = moments.m01 / moments.m00; // Y坐标的中心
                 dx = pid_controller_dx.update(src.cols * 0.5, cx);
-                dy = pid_controller_dy.update(src.rows * 0.5, cy);
+                dy = pid_controller_dy.update(target_y, cy);
                 // cout << "dx=" << dx << endl;
                 // cout << "dy=" << dy << endl;
                 ROS_INFO("dx=%f", dx);

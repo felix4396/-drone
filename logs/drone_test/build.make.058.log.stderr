@@ -1,0 +1,10 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:[m[K In function ‘[01m[Kvoid getLine(cv::Mat&, std::vector<cv::Vec<int, 4> >&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:210:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble timeInSeconds[m[K’
+  210 |     double [01;31m[KtimeInSeconds[m[K = duration_2.count();
+      |            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/star_detection.cpp:195:12:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble timeInSeconds[m[K’ previously declared here
+  195 |     double [01;36m[KtimeInSeconds[m[K = duration_1.count();
+      |            [01;36m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/star_detection.dir/build.make:63：CMakeFiles/star_detection.dir/src/star_detection.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:507：CMakeFiles/star_detection.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

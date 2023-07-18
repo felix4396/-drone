@@ -1,9 +1,0 @@
-[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:348:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint arm_drone(ros::NodeHandle&)[m[K’
-  348 | int [01;31m[Karm_drone[m[K(ros::NodeHandle &nh)
-      |     [01;31m[K^~~~~~~~~[m[K
-[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:295:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint arm_drone(ros::NodeHandle&)[m[K’ previously defined here
-  295 | int [01;36m[Karm_drone[m[K(ros::NodeHandle &nh)
-      |     [01;36m[K^~~~~~~~~[m[K
-make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:63：CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:304：CMakeFiles/yyy_drone.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

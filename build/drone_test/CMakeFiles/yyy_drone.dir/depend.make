@@ -36,6 +36,7 @@ CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_m
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
+CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovarianceStamped.h
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3Stamped.h
 CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: /opt/ros/noetic/include/geometry_msgs/Wrench.h

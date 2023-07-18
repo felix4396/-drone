@@ -1,0 +1,13 @@
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:[m[K In function ‘[01m[Kvoid get_speed(const ConstPtr&)[m[K’:
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:454:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistWithCovarianceStamped_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::TwistWithCovariance_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klinear[m[K’
+  454 |     now_speed[0] = twist.twist.[01;31m[Klinear[m[K.x;
+      |                                [01;31m[K^~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:455:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistWithCovarianceStamped_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::TwistWithCovariance_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klinear[m[K’
+  455 |     now_speed[1] = twist.twist.[01;31m[Klinear[m[K.y;
+      |                                [01;31m[K^~~~~~[m[K
+[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:456:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistWithCovarianceStamped_<std::allocator<void> >::_twist_type[m[K’ {aka ‘[01m[Kstruct geometry_msgs::TwistWithCovariance_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klinear[m[K’
+  456 |     now_speed[2] = twist.twist.[01;31m[Klinear[m[K.z;
+      |                                [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:63：CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:305：CMakeFiles/yyy_drone.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

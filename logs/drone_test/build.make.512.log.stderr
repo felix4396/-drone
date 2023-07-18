@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o: in function `set_pose_local(float, float, float, float)':
-yyy_drone.cpp:(.text+0x2514): undefined reference to `void tf2::doTransform<geometry_msgs::PointStamped_<std::allocator<void> > >(geometry_msgs::PointStamped_<std::allocator<void> > const&, geometry_msgs::PointStamped_<std::allocator<void> >&, geometry_msgs::TransformStamped_<std::allocator<void> > const&)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:167：/home/oem/catkin_ws/devel/.private/drone_test/lib/drone_test/yyy_drone] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:304：CMakeFiles/yyy_drone.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2

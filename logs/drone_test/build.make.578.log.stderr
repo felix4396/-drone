@@ -1,7 +1,0 @@
-[01m[K/home/oem/catkin_ws/src/drone_test/src/yyy_drone.cpp:38:10:[m[K [01;31m[Kfatal error: [m[Kserial_port/Y_Serial_port.h: 没有那个文件或目录
-   38 | #include [01;31m[K"serial_port/Y_Serial_port.h"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/yyy_drone.dir/build.make:63：CMakeFiles/yyy_drone.dir/src/yyy_drone.cpp.o] 错误 1
-make[1]: *** [CMakeFiles/Makefile2:305：CMakeFiles/yyy_drone.dir/all] 错误 2
-make: *** [Makefile:141：all] 错误 2
